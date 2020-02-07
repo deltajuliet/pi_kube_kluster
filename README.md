@@ -2,8 +2,8 @@
 Initial installation steps:
 
 ## Imaging
-1. Download (Raspbian Lite)[https://www.raspberrypi.org/downloads/raspbian/] image.
-2. Download and install [balenaEtcher][https://www.balena.io/etcher/]
+1. Download [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/) image.
+2. Download and install [balenaEtcher](https://www.balena.io/etcher/)
 3. Image SD card with Raspbian Lite
 
 ## Initial headless configuration
@@ -23,14 +23,17 @@ network={
 4. Insert SD card in Pi and power up
 5. SSH using pi:raspberry
 6. Change default password
-7. Change the hostname `sudo vi /etc/hostname`
-8. Reboot
-9. Setup DHCP reservation on router
+7. Install VIM ``
+8. Change the hostname `sudo vim /etc/hostname`
+9. Reboot
+10. Setup DHCP reservation on router
+11. Add host to local /etc/hosts file `vim /etc/hosts`
 
-## Prep for K3S
-1. Setup CPU for 
+## Prep for k3s
+1. Setup CPU for containers `vi``cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory`
 
 
 ## References
-https://github.com/rancher/k3s
-https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/
+[k3s Github Page](https://github.com/rancher/k3s)
+[Pi Dramble](https://github.com/geerlingguy/raspberry-pi-dramble)
+[https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/](https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/)
