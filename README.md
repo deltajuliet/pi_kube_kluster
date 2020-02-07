@@ -27,14 +27,19 @@ network={
 8. Change the hostname `sudo vim /etc/hostname`
 9. Reboot
 10. Setup DHCP reservation on router
-11. Add host to local /etc/hosts file `sudo vim /etc/hosts` and change /etc/hosts `sudo vim /etc/hosts`
+11. Add host to local /etc/hosts file `sudo vim /etc/hosts` and change /etc/hosts `sudo vim /etc/hosts`:
+```
+192.168.1.70    pi-kube-master
+192.168.1.71    pi-kube-node01
+192.168.1.72    pi-kube-node02
+192.168.1.73    pi-kube-node03
+```
 12. Copy local SSH key to pi `ssh-copy-id [PI_HOSTNAME_OR_IP]`
 
 ## Setup k3s master node
 1. Generate an ssh key `ssh-keygen`
-2. Add all nodes to /etc/hosts `sudo vim /etc/hosts`
-3. Push key to other node `ssh-copy-id pi@[NODE_HOSTNAME]`
-4. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory`
+2. Push key to other node `ssh-copy-id pi@[NODE_HOSTNAME]`
+3. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory`
 
 ## References
 -[k3s Github Page](https://github.com/rancher/k3s)
