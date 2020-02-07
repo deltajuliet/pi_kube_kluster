@@ -3,7 +3,7 @@ Initial installation steps:
 
 ## Imaging
 1. Download (Raspbian Lite)[https://www.raspberrypi.org/downloads/raspbian/] image.
-2. Download and install [balenaEtche]r[https://www.balena.io/etcher/]
+2. Download and install [balenaEtcher][https://www.balena.io/etcher/]
 3. Image SD card with Raspbian Lite
 
 ## Initial headless configuration
@@ -25,3 +25,12 @@ network={
 6. Change default password
 7. Change the hostname `sudo vi /etc/hostname`
 8. Reboot
+9. Setup DHCP reservation on router
+
+## Prep for K3S
+1. Setup CPU for 
+
+
+## References
+https://github.com/rancher/k3s
+https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/
