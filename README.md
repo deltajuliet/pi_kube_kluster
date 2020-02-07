@@ -23,3 +23,5 @@ network={
 4. Insert SD card in Pi and power up
 5. SSH using pi:raspberry
 6. Change default password
+7. Change the hostname `vi /etc/hostname`
+8. Reboot
