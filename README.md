@@ -27,7 +27,7 @@ network={
 8. Change the hostname `sudo vim /etc/hostname`
 9. Reboot
 10. Setup DHCP reservation on router
-11. Add host to local /etc/hosts file `sudo vim /etc/hosts`
+11. Add host to local /etc/hosts file `sudo vim /etc/hosts` and change /etc/hosts `sudo vim /etc/hosts`
 12. Copy local SSH key to pi `ssh-copy-id [PI_HOSTNAME_OR_IP]`
 
 ## Setup k3s master node
