@@ -19,7 +19,7 @@ network={
     key_mgmt=WPA-PSK
 }
 ```
-3. Unmount SD card
+3. Unmount SD card `sudo diskutil unmount /Volumes/boot`
 4. Insert SD card in Pi and power up
 5. SSH using pi:raspberry
 6. Change default password
