@@ -39,14 +39,14 @@ network={
 ## Setup k3s master node
 1. Generate an ssh key `ssh-keygen`
 2. Push key to other nodes `ssh-copy-id pi@[NODE_HOSTNAME]`
-3. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory`
+3. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory` to the end of the first line in `/boot/cmdline.txt`
 4. Reboot
 5. Install k3s `curl -sfL https://get.k3s.io | sh -`
 6. Validate the server is up and running `sudo systemctl status k3s`
 7. Copy the server token `sudo cat /var/lib/rancher/k3s/server/node-token`
 
 ## Setup other nodes
-1. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory`
+1. Setup CPU for containers `vim ` and then add `cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory` to the end of the first line in `/boot/cmdline.txt`
 2. Reboot
 3. Setup environmental variables for k3s agent installation:
 ```
