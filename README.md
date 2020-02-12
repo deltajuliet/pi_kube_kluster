@@ -58,6 +58,10 @@ export K3S_TOKEN="[MASTER_SERVER_TOKEN]"
 ## Validate installation
 1. List out nodes `sudo kubectl get node -o wide`
 
+## Multi-interface quirks
+1. Configure the eth0 interfaces with addresses referened above by using the `/etc/dhcpcd.conf` file to statically assign IP addresses based on fallback profiles.
+2. Use the following install command for the k3s master node `curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --advertise-address=192.168.1.70 --bind-address=192.168.1.70" sh -`
+
 ## References
 -[k3s Github Page](https://github.com/rancher/k3s)
 -[Pi Dramble](https://github.com/geerlingguy/raspberry-pi-dramble)
