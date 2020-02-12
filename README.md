@@ -62,6 +62,9 @@ export K3S_TOKEN="[MASTER_SERVER_TOKEN]"
 1. Configure the eth0 interfaces with addresses referened above by using the `/etc/dhcpcd.conf` file to statically assign IP addresses based on fallback profiles.
 2. Use the following install command for the k3s master node `curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --advertise-address=192.168.1.70 --bind-address=192.168.1.70" sh -`
 
+## Uninstall quirks
+the `k3s-uninstall.sh` and `k3s-agent-uninstall.sh` commands don't completely clean up all left over files... use `sudo rm -rf /etc/rancher/ /var/lib/rancher/ /run/k3s/` to completely clean up all of the files.
+
 ## References
 -[k3s Github Page](https://github.com/rancher/k3s)
 -[Pi Dramble](https://github.com/geerlingguy/raspberry-pi-dramble)
