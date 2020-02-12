@@ -50,7 +50,7 @@ network={
 2. Reboot
 3. Setup environmental variables for k3s agent installation:
 ```
-export K3S_URL="https://[MASTER_IP_ADDRESS]"
+export K3S_URL="https://[MASTER_IP_ADDRESS]:6443"
 export K3S_TOKEN="[MASTER_SERVER_TOKEN]"
 ```
 4. Install k3s `curl -sfL https://get.k3s.io | sh -`
