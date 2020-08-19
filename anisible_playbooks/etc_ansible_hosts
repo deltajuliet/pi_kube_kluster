@@ -1,0 +1,14 @@
+all:
+  children:  
+    ceph_monitors:
+      hosts:
+        dj-pi-kube-node[01:03]:
+    ceph_osds:
+      hosts:
+        dj-pi-kube-master:
+    k3s_masters:
+      hosts:      
+        dj-pi-kube-master:
+    k3s_nodes:
+      hosts:
+        dj-pi-kube-node[01:03]:
